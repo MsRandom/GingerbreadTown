@@ -1,0 +1,16 @@
+modLoader="javafml"
+loaderVersion="[28,)"
+[[mods]]
+modId="gingerbread"
+version="${file.jarVersion}"
+displayName="Gingerbread Town"
+credits="" #o
+authors="" #o
+description='''
+'''
+[[dependencies.cml]]
+    modId="forge"
+    mandatory=true
+    versionRange="[28,)"
+    ordering="NONE"
+    side="BOTH"
