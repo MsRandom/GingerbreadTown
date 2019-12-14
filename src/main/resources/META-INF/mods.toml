@@ -8,7 +8,7 @@ credits="" #o
 authors="" #o
 description='''
 '''
-[[dependencies.cml]]
+[[dependencies.gingerbread]]
     modId="forge"
     mandatory=true
     versionRange="[28,)"

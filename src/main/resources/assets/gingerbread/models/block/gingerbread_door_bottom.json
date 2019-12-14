@@ -1,0 +1,7 @@
+{
+  "parent": "block/door_bottom",
+  "textures": {
+    "bottom": "gingerbread:block/gingerbread_door_bottom",
+    "top": "gingerbread:block/gingerbread_door_top"
+  }
+}
