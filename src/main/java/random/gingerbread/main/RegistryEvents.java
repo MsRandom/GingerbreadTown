@@ -5,13 +5,13 @@ import net.minecraft.item.Item;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.Biomes;
 import net.minecraft.world.gen.feature.Feature;
+import net.minecraft.world.gen.feature.IFeatureConfig;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import random.gingerbread.block.GingerbreadBlocks;
 import random.gingerbread.item.GingerbreadItems;
 import random.gingerbread.world.gen.feature.GingerbreadFeatures;
-import random.gingerbread.world.gen.feature.structure.GingerbreadVillageConfig;
 
 @Mod.EventBusSubscriber(modid = GingerbreadTown.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class RegistryEvents {
@@ -28,7 +28,7 @@ public class RegistryEvents {
 
     @SubscribeEvent
     public static void registerBiomes(RegistryEvent.Register<Biome> event) {
-        Biomes.SNOWY_TUNDRA.addStructure(GingerbreadFeatures.VILLAGE, new GingerbreadVillageConfig(4));
+        Biomes.SNOWY_TUNDRA.addStructure(GingerbreadFeatures.VILLAGE, IFeatureConfig.NO_FEATURE_CONFIG);
     }
 
     @SubscribeEvent

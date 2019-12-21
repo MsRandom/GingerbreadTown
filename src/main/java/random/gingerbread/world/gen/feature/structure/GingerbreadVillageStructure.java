@@ -6,6 +6,7 @@ import net.minecraft.util.math.ChunkPos;
 import net.minecraft.util.math.MutableBoundingBox;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.ChunkGenerator;
+import net.minecraft.world.gen.feature.NoFeatureConfig;
 import net.minecraft.world.gen.feature.structure.MarginedStructureStart;
 import net.minecraft.world.gen.feature.structure.Structure;
 import net.minecraft.world.gen.feature.template.TemplateManager;
@@ -15,9 +16,9 @@ import random.gingerbread.world.gen.feature.GingerbreadFeatures;
 import java.util.Random;
 import java.util.function.Function;
 
-public class GingerbreadVillageStructure extends Structure<GingerbreadVillageConfig> {
+public class GingerbreadVillageStructure extends Structure<NoFeatureConfig> {
 
-    public GingerbreadVillageStructure(Function<Dynamic<?>, ? extends GingerbreadVillageConfig> p_i51427_1_) {
+    public GingerbreadVillageStructure(Function<Dynamic<?>, ? extends NoFeatureConfig> p_i51427_1_) {
         super(p_i51427_1_);
         setRegistryName("gingerbread_village");
     }
@@ -50,7 +51,7 @@ public class GingerbreadVillageStructure extends Structure<GingerbreadVillageCon
         }
 
         public void init(ChunkGenerator<?> generator, TemplateManager templateManagerIn, int chunkX, int chunkZ, Biome biomeIn) {
-            GingerbreadVillageConfig villageconfig = generator.getStructureConfig(biomeIn, GingerbreadFeatures.VILLAGE);
+            NoFeatureConfig villageconfig = generator.getStructureConfig(biomeIn, GingerbreadFeatures.VILLAGE);
             BlockPos blockpos = new BlockPos(chunkX * 16, 0, chunkZ * 16);
             GingerbreadVillagePieces.register(generator, templateManagerIn, blockpos, this.components, this.rand, villageconfig);
             System.out.println(blockpos);
